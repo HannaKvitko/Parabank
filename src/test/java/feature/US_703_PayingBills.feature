@@ -1,15 +1,9 @@
 Feature: Paying Bills
 
-  Background:
-    Given I visit the parabank websit
-    When I enter the valid user information on the main page to log in my account
-      |LidiyaPiers|
-      |Zas758974@|
-    Then I click on the Log In button
 
   Scenario:
 
-   // Given  The user successfully logins to the ParaBank website.
+    Given  The user successfully logins to the ParaBank website.
     When The user clicks the ""Bill Pay"" option from the menu on the website.
     And The user is directed to the invoice payment page.
     And The user fills the invoice information in the customer datas with random values.

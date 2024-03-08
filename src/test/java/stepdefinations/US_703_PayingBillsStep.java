@@ -1,4 +1,4 @@
-package Stepdefinitions;
+package stepdefinations;
 
 import Utilities.ReusableMethod;
 import Utilities.ThreadSafeDriver;
@@ -9,25 +9,26 @@ import org.testng.Assert;
 import pages.ParentPage;
 import pages.SetUpPage;
 
+import java.sql.SQLOutput;
+
 public class US_703_PayingBillsStep extends ParentPage {
 
     US_703_PayingBillsStep Step = new US_703_PayingBillsStep();
 
-    //@Given("The user successfully logins to the ParaBank website.")
-   // public void the_user_successfully_logins_to_the_para_bank_website() {
-      //  ReusableMethod.wait(1);
+    @Given("The user successfully logins to the ParaBank website.")
+    public void the_user_successfully_logins_to_the_para_bank_website() {
+        ReusableMethod.wait(1);
         // Navigate to Campus
-       // ThreadSafeDriver.getDriver().get
-           //     ("https://parabank.parasoft.com/parabank/index.htm?ConnType=JDBC");
-       // ReusableMethod.wait(1);
-       // SetUpPage.usernameTextBox.sendKeys("JohnWoit");
-       // ReusableMethod.wait(1);
-       // SetUpPage.passwordTextBox.sendKeys("Qwerty123");
-       // ReusableMethod.wait(1);
-       // SetUpPage.loginButton.click();
+        ThreadSafeDriver.getDriver().get
+                ("https://parabank.parasoft.com/parabank/index.htm?ConnType=JDBC");
+        ReusableMethod.wait(1);
+        SetUpPage.usernameTextBox.sendKeys("JohnWoit");
+        ReusableMethod.wait(1);
+        SetUpPage.passwordTextBox.sendKeys("Qwerty123");
+        ReusableMethod.wait(1);
+        SetUpPage.loginButton.click();
 
-   // }
-
+    }
 
 
     @When("The user clicks the \"\"Bill Pay\"\" option from the menu on the website.")
